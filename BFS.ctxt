@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=BFS
+comment1.params=graph\ source\ destination\ visited\ path
+comment1.target=void\ dfs(Graph,\ Node,\ Node,\ java.util.ArrayList,\ java.util.ArrayList)
+comment2.params=graph\ source\ destination
+comment2.target=java.util.ArrayList\ findAllPaths(Graph,\ Node,\ Node)
+numComments=3

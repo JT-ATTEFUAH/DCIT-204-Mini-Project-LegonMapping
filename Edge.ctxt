@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Edge
+comment1.params=
+comment1.target=double\ getDistance()
+comment2.params=
+comment2.target=long\ getTime()
+comment3.params=
+comment3.target=java.lang.String\ toString()
+comment4.params=other
+comment4.target=int\ compareTo(Edge)
+comment5.params=
+comment5.target=Edge\ clone()
+numComments=6
