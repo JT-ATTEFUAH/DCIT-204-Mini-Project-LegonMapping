@@ -56,7 +56,7 @@ Get User Input for Source and Destination:
    - Display the last five paths from allPaths
    - For each path, print the path sequence and the total distance
 
-        Detailed BFS Algorithm:
+       // Detailed BFS Algorithm:
             Function BFS(Graph, source, destination):
                 - Initialize:
                     - Create a queue Q
