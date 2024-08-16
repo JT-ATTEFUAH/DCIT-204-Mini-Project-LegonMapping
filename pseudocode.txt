@@ -1,10 +1,11 @@
 // LegonMapping Project Pseudo Code:Optimal Routing Solution
-1. Initialize Graph:
+Start
+ Initialize Graph:
    - Create a Graph object
    - Define Nodes with names (e.g., "Gym", "Diaspora", "ISH", etc.)
    - Add edges between nodes with associated distances and travel times
 
-2. Populate Graph with Edges:
+ Populate Graph with Edges:
    - For each pair of connected nodes, create an Edge object with:
        - Start Node
        - End Node
@@ -12,27 +13,67 @@
        - Travel Time
    - Add each Edge to the Graph
 
-3. Print Available Nodes:
+ Print Available Nodes:
    - Call Graph.printNodes() to display all nodes to the user
 
-4. Get User Input for Source and Destination:
+Get User Input for Source and Destination:
    - Prompt user to select a start point (source)
    - Prompt user to select a destination
 
-5. Find Shortest Path using Dijkstra’s Algorithm:
+ Find Shortest Path using Dijkstra’s Algorithm:
    - Call Dijkstra(Graph, source)
    - Store result in shortestPath
 
-6. Print Shortest Path and Distance:
+       // Detailed Dijkstra’s Algorithm:
+            Function Dijkstra(Graph, source):
+                - Initialize:
+                    - Set distance of source to 0
+                    - Set all other nodes' distances to infinity
+                    - Create a priority queue Q containing all nodes
+
+                - While Q is not empty:
+                    - Extract node u from Q with the smallest distance
+
+                    - For each neighbor v of u:
+                        - Get edge e between u and v
+                        - Calculate alternative distance alt = distance[u] + e.distance
+
+                        - If alt < distance[v]:
+                            - Update distance[v] = alt
+                            - Update predecessor of v to u
+
+                    - Mark u as visited
+
+                - Return distance and predecessor data
+
+
+ Print Shortest Path and Distance:
    - Display the shortest path and the total distance to the user
 
-7. Find All Paths using BFS Algorithm:
+ Find All Paths using BFS Algorithm:
    - Call BFS(Graph, source, destination)
-   - Store result in allPaths
-
-8. Print a Selection of All Paths:
+   - Store result in allPaths Print a Selection of All Paths:
    - Display the last five paths from allPaths
    - For each path, print the path sequence and the total distance
 
-9. End Program
+        Detailed BFS Algorithm:
+            Function BFS(Graph, source, destination):
+                - Initialize:
+                    - Create a queue Q
+                    - Create a list paths to store all paths
+                    - Enqueue the source node onto Q with a list containing only source
+
+                - While Q is not empty:
+                    - Dequeue the front element from Q, get the current node and path
+
+                    - If current node is the destination:
+                        - Add current path to paths
+
+                    - For each neighbor v of current node:
+                        - If v is not in current path (to avoid cycles):
+                            - Create a new path newPath = current path + [v]
+                            - Enqueue (v, newPath) onto Q
+
+                - Return paths
+ End Program
 
