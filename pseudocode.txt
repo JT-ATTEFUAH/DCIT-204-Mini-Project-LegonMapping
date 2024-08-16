@@ -1,4 +1,38 @@
-// Pseudocode for UG Navigate: Optimal Routing Solution
+// LegonMapping Project Pseudo Code:Optimal Routing Solution
+1. Initialize Graph:
+   - Create a Graph object
+   - Define Nodes with names (e.g., "Gym", "Diaspora", "ISH", etc.)
+   - Add edges between nodes with associated distances and travel times
 
-// Define a class for the Campus Map
+2. Populate Graph with Edges:
+   - For each pair of connected nodes, create an Edge object with:
+       - Start Node
+       - End Node
+       - Distance
+       - Travel Time
+   - Add each Edge to the Graph
+
+3. Print Available Nodes:
+   - Call Graph.printNodes() to display all nodes to the user
+
+4. Get User Input for Source and Destination:
+   - Prompt user to select a start point (source)
+   - Prompt user to select a destination
+
+5. Find Shortest Path using Dijkstra’s Algorithm:
+   - Call Dijkstra(Graph, source)
+   - Store result in shortestPath
+
+6. Print Shortest Path and Distance:
+   - Display the shortest path and the total distance to the user
+
+7. Find All Paths using BFS Algorithm:
+   - Call BFS(Graph, source, destination)
+   - Store result in allPaths
+
+8. Print a Selection of All Paths:
+   - Display the last five paths from allPaths
+   - For each path, print the path sequence and the total distance
+
+9. End Program
 
