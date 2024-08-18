@@ -26,53 +26,52 @@ Get User Input for Source and Destination:
 
        // Detailed Dijkstra’s Algorithm:
             Function Dijkstra(Graph, source):
-                - Initialize:
-                    - Set distance of source to 0
-                    - Set all other nodes' distances to infinity
-                    - Create a priority queue Q containing all nodes
+              Initialize:
+              Set distance of source to 0
+              Set all other nodes' distances to infinity
+              Create a priority queue Q containing all nodes
 
-                - While Q is not empty:
-                    - Extract node u from Q with the smallest distance
+                 While Q is not empty:
+                   Extract node u from Q with the smallest distance
 
-                    - For each neighbor v of u:
-                        - Get edge e between u and v
-                        - Calculate alternative distance alt = distance[u] + e.distance
+                    For each neighbor v of u:
+                    Get edge e between u and v
+                    Calculate alternative distance alt = distance[u] + e.distance
 
-                        - If alt < distance[v]:
-                            - Update distance[v] = alt
-                            - Update predecessor of v to u
+                       If alt < distance[v]:
+                       Update distance[v] = alt
+                       Update predecessor of v to u
 
                     - Mark u as visited
 
                 - Return distance and predecessor data
 
-
  Print Shortest Path and Distance:
    - Display the shortest path and the total distance to the user
 
  Find All Paths using BFS Algorithm:
-   - Call BFS(Graph, source, destination)
-   - Store result in allPaths Print a Selection of All Paths:
-   - Display the last five paths from allPaths
-   - For each path, print the path sequence and the total distance
+   Call BFS(Graph, source, destination)
+   Store result in allPaths Print a Selection of All Paths:
+   Display the last five paths from allPaths
+   For each path, print the path sequence and the total distance
 
        // Detailed BFS Algorithm:
             Function BFS(Graph, source, destination):
-                - Initialize:
-                    - Create a queue Q
-                    - Create a list paths to store all paths
-                    - Enqueue the source node onto Q with a list containing only source
+             Initialize:
+              Create a queue Q
+              Create a list paths to store all paths
+              Enqueue the source node onto Q with a list containing only source
 
-                - While Q is not empty:
-                    - Dequeue the front element from Q, get the current node and path
+                While Q is not empty:
+                  Dequeue the front element from Q, get the current node and path
 
-                    - If current node is the destination:
-                        - Add current path to paths
+                   If current node is the destination:
+                   Add current path to paths
 
-                    - For each neighbor v of current node:
-                        - If v is not in current path (to avoid cycles):
-                            - Create a new path newPath = current path + [v]
-                            - Enqueue (v, newPath) onto Q
+                     For each neighbor v of current node:
+                         If v is not in current path (to avoid cycles):
+                            Create a new path newPath = current path + [v]
+                            Enqueue (v, newPath) onto Q
 
                 - Return paths
  End Program
